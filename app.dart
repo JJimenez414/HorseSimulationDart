@@ -15,8 +15,6 @@ void main() {
   String? num_races_input = stdin.readLineSync(); // get number of races
   int num_races = int.tryParse(num_races_input ?? '') ?? 0; // parse the num of races given by user to an int
 
-  print("");
-
   List<Horse> race_roster = [];
 
   // get the first inital batch of horses
@@ -27,6 +25,9 @@ void main() {
 
   // Repeat until we have no more races
   for (int i = 0; i < num_races; i++) {
+    print("");
+    print("Race: ${i+1}");
+
     // create a random race
     Race race = Race(race_roster, distance);
 
